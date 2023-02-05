@@ -8,32 +8,36 @@ const useApi = (storageName) => {
     JSON.parse(localStorage.getItem(storageName)) || []
   );
   const [error, setError] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const fetchMeal = useCallback(async (value) => {
     if (meal) {
       return;
     }
+    setLoading(true);
     try {
       const { data } = await axios.get(
         `https://api.spoonacular.com/recipes/random?apiKey=${API_KEY}&number=9&${
           value ? `tags=${value}` : ''
         }`
       );
-    
+
       setMeal(data.recipes);
+      setLoading(false);
     } catch (err) {
       if (err) {
         console.error(err);
         setError('Error with fetching meal');
       }
     }
+    setLoading(false);
   }, []);
 
   useEffect(() => {
     localStorage.setItem(storageName, JSON.stringify(meal));
   }, [meal]);
 
-  return { meal, error, fetchMeal };
+  return { meal, error, loading, fetchMeal };
 };
 
 export default useApi;

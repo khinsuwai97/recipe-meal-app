@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-
 import useApi from '../hooks/useApi';
 import Error from './Error';
 import ShowMealItems from './ShowMealItems';
+import Loader from './Loader';
 
 const Dessert = () => {
-  const { meal: dessert, error, fetchMeal } = useApi('dessert');
+  const { meal: dessert, error, loading, fetchMeal } = useApi('dessert');
 
   useEffect(() => {
     fetchMeal('dessert');
@@ -14,6 +14,11 @@ const Dessert = () => {
   if (error) {
     <Error text={error} />;
   }
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return <ShowMealItems headerText="Dessert" meals={dessert} />;
 };
 
