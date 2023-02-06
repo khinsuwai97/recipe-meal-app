@@ -11,10 +11,6 @@ const Dessert = () => {
     fetchMeal('dessert');
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem('dessert', JSON.stringify(dessert));
-  }, [dessert]);
-
   if (error) {
     <Error text={error} />;
   }

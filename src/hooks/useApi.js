@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import axios from 'axios';
 
 export const API_KEY = 'f7f4fb6602b14a4794ac47f148e5b48b';
@@ -21,7 +21,9 @@ const useApi = (storageName) => {
           }`
         );
 
+        localStorage.setItem(storageName, JSON.stringify(data.recipes));
         setMeal(data.recipes);
+
         setLoading(false);
       } catch (err) {
         if (err) {
@@ -32,6 +34,10 @@ const useApi = (storageName) => {
       setLoading(false);
     }
   }, []);
+
+  // useEffect(() => {
+  //   localStorage.setItem(storageName, JSON.stringify(meal));
+  // }, [meal]);
 
   return { meal, error, loading, fetchMeal };
 };

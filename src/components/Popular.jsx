@@ -6,13 +6,10 @@ import Loader from './Loader';
 
 const Popular = () => {
   const { meal: popular, error, loading, fetchMeal } = useApi('popular');
+
   useEffect(() => {
     fetchMeal();
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem('popular', JSON.stringify(popular));
-  }, [popular]);
 
   if (error) {
     <Error text={error} />;
