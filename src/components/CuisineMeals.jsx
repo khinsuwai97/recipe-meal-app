@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import Loader from '../components/Loader';
 import Error from '../components/Error';
 import useSearch from '../hooks/useSearch';
+import { motion } from 'framer-motion';
 
 const CuisineMeals = () => {
   const { meal: cuisine, error, loading, fetchMeal } = useSearch();
@@ -22,7 +23,13 @@ const CuisineMeals = () => {
   }
 
   return (
-    <section className="container my-0 mx-auto py-10">
+    <motion.div
+      className="container my-0 mx-auto py-10"
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 lg:gap-x-4 gap-x-2 gap-y-8">
         {cuisine.map((meal) => {
           return (
@@ -56,7 +63,7 @@ const CuisineMeals = () => {
           &larr; Back to home
         </Link>
       </div>
-    </section>
+    </motion.div>
   );
 };
 

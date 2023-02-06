@@ -33,10 +33,6 @@ const useApi = (storageName) => {
     setLoading(false);
   }, []);
 
-  useEffect(() => {
-    localStorage.setItem(storageName, JSON.stringify(meal));
-  }, [meal]);
-
   return { meal, error, loading, fetchMeal };
 };
 

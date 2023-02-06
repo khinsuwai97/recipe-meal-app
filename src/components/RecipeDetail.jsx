@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { AiOutlineClockCircle } from 'react-icons/ai';
 import { BsPeople } from 'react-icons/bs';
 import { nanoid } from 'nanoid';
+import { motion } from 'framer-motion';
 
 const RecipeDetail = () => {
   const [activeTab, setActiveTab] = useState('instructions');
@@ -32,7 +33,13 @@ const RecipeDetail = () => {
   const activeClass = 'bg-gradient text-whiteColor border-none ';
 
   return (
-    <section className="container my-0 mx-auto py-10">
+    <motion.div
+      className="container my-0 mx-auto py-10"
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <div className="grid sm:grid-cols-2 grid-cols-1 sm:gap-0 gap-8">
         <div>
           <h2 className="font-nunitoSans mb-4 ml-4 sm:text-[18px] text-[16px] text-greenShade font-semibold">
@@ -121,7 +128,7 @@ const RecipeDetail = () => {
           &larr; Back to home
         </Link>
       </div>
-    </section>
+    </motion.div>
   );
 };
 

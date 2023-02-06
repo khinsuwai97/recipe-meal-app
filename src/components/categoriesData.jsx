@@ -1,5 +1,5 @@
 import { GiNoodles, GiChopsticks } from 'react-icons/gi';
-import { FaPizzaSlice, FaHamburger, FaHeart } from 'react-icons/fa';
+import { FaPizzaSlice, FaHamburger} from 'react-icons/fa';
 
 const data = [
   { title: 'American', icon: <FaHamburger />, link: '/cuisine/american' },

@@ -34,13 +34,13 @@ const SearchBar = () => {
         </Link>
       </div>
       <form
-        className="flex justify-center items-center relative "
+        className="flex justify-center items-center  "
         onSubmit={handleFormSubmit}
       >
         <input
           type="text"
           placeholder="Search Favorite Meal"
-          className="py-[10px]  md:w-[35%] px-[45px] rounded-[20px] bg-gradient text-whiteColor font-nunitoSans font-[16px] placeholder:text-dimWhite focus:outline-secondary "
+          className="py-[10px]  md:w-[35%]  px-[50px] rounded-[20px] bg-gradient text-whiteColor font-nunitoSans font-[16px] placeholder:text-dimWhite focus:outline-secondary "
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
         />

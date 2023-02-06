@@ -1,16 +1,22 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 
 import Popular from '../components/Popular';
 import Veggie from '../components/Veggie';
 import Dessert from '../components/Dessert';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
-    <Fragment>
+    <motion.div
+      animate={{ opacity: 1 }}
+      initial={{ opacity: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       <Popular />
       <Veggie />
       <Dessert />
-    </Fragment>
+    </motion.div>
   );
 };
 

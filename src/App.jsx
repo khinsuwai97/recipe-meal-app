@@ -2,7 +2,7 @@ import React from 'react';
 
 import SearchBar from './components/SearchBar';
 import Pages from './pages/Pages';
-import Search from './pages/Search';
+
 
 const App = () => {
   return (
