@@ -1,15 +1,17 @@
 import React from 'react';
-import Typed from 'react-typed';
+import Typewriter from 'typewriter-effect';
 import { Link } from 'react-router-dom';
 const FirstPage = ({ handleShowPage }) => {
   return (
     <div className="flex flex-col justify-center items-center h-screen gap-8  ">
-      <h1 className="text-gradient font-dancingScript font-bold sm:text-[64px] text-[40px] ">
-        <Typed
-          strings={[' Welcome to Delicito']}
-          typeSpeed={100}
-          backSpeed={100}
-          loop
+      <h1 className="text-gradient font-dancingScript font-bold sm:text-[64px] text-[40px]  ">
+        <Typewriter
+          options={{
+            strings: 'Welcome to Delicito',
+            autoStart: true,
+            loop: true,
+            delay: 75,
+          }}
         />
       </h1>
       <p className="sm:text-[24px] font-nunitoSans text-gradient text-[16px] font-semibold tracking-tight">
@@ -29,3 +31,11 @@ const FirstPage = ({ handleShowPage }) => {
 };
 
 export default FirstPage;
+{
+  /* <Typed
+strings={[' Welcome to Delicito']}
+typeSpeed={100}
+backSpeed={100}
+loop
+/> */
+}
