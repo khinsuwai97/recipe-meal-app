@@ -11,6 +11,10 @@ const Popular = () => {
     fetchMeal();
   }, []);
 
+  // useEffect(() => {
+  //   localStorage.setItem('popular', JSON.stringify(popular));
+  // }, [popular]);
+
   if (error) {
     <Error text={error} />;
   }

@@ -57,7 +57,7 @@ const CuisineMeals = () => {
       </div>
       <div className="flex justify-center items-center mt-9">
         <Link
-          to="/"
+          to="/home"
           className="bg-gradient font-nunitoSans sm:text-[16px] text-[12px] text-center px-3 py-1 rounded-[30px] text-whiteColor font-semibold cursor-pointer "
         >
           &larr; Back to home

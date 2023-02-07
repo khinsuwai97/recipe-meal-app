@@ -1,8 +1,8 @@
 import React, { useState, Fragment } from 'react';
 import { BiSearch } from 'react-icons/bi';
-import { GiKnifeFork } from 'react-icons/gi';
+import Logo from './Logo';
 import Categories from './Categories';
-import { Link } from 'react-router-dom';
+
 import { useNavigate } from 'react-router-dom';
 
 const SearchBar = () => {
@@ -22,17 +22,7 @@ const SearchBar = () => {
 
   return (
     <header className="ml-[24px] ">
-      <div className="flex items-center mb-6 mt-2">
-        <Link
-          to="/"
-          className="font-dancingScript text-gradient font-bold text-[36px]"
-        >
-          Delicito
-        </Link>
-        <Link to="/" className="text-[26px] text-greenShade ">
-          <GiKnifeFork />
-        </Link>
-      </div>
+      <Logo />
       <form
         className="flex justify-center items-center  "
         onSubmit={handleFormSubmit}

@@ -9,14 +9,17 @@ const Veggie = () => {
 
   useEffect(() => {
     fetchMeal('vegetarian');
-  }, []) 
-  
+  }, []);
+
+  // useEffect(() => {
+  //   localStorage.setItem('veggie', JSON.stringify(veggie));
+  // }, [veggie]);
 
   if (error) {
     <Error text={error} />;
   }
-  if(loading){
-    return <Loader/>
+  if (loading) {
+    return <Loader />;
   }
   return <ShowMealItems headerText="Vegetarian" meals={veggie} />;
 };

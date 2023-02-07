@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback } from 'react';
 import axios from 'axios';
 
 export const API_KEY = 'f7f4fb6602b14a4794ac47f148e5b48b';
@@ -9,9 +9,9 @@ const useApi = (storageName) => {
   const [loading, setLoading] = useState(false);
 
   const fetchMeal = useCallback(async (value) => {
-    const check = localStorage.getItem(storageName);
+    const check = JSON.parse(localStorage.getItem(storageName));
     if (check) {
-      setMeal(JSON.parse(check));
+      setMeal(check);
     } else {
       setLoading(true);
       try {
@@ -20,24 +20,19 @@ const useApi = (storageName) => {
             value ? `tags=${value}` : ''
           }`
         );
-
-        localStorage.setItem(storageName, JSON.stringify(data.recipes));
+        // console.log(data.recipes);
+        localStorage.setItem(storageName, JSON.stringify(data.meals));
         setMeal(data.recipes);
-
         setLoading(false);
       } catch (err) {
         if (err) {
           console.error(err);
           setError('Error with fetching meal');
         }
+        setLoading(false);
       }
-      setLoading(false);
     }
   }, []);
-
-  // useEffect(() => {
-  //   localStorage.setItem(storageName, JSON.stringify(meal));
-  // }, [meal]);
 
   return { meal, error, loading, fetchMeal };
 };
