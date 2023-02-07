@@ -61,7 +61,7 @@ const SearchMeals = () => {
       <div className="flex justify-center items-center mt-9">
         <Link
           to="/home"
-          className="bg-gradient font-nunitoSans sm:text-[16px] text-[12px] text-center px-3 py-1 rounded-[30px] text-whiteColor font-semibold cursor-pointer "
+          className="bg-gradient font-nunitoSans sm:text-[20px] text-[16px] text-center px-4 py-1 rounded-[30px] text-whiteColor font-semibold cursor-pointer "
         >
           &larr; Back to home
         </Link>

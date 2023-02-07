@@ -16,9 +16,9 @@ const Home = ({ handleBacktoFirstPage }) => {
       <Popular />
       <Veggie />
       <Dessert />
-      <div className="flex justify-center items-center mb-8">
+      <div className="flex justify-center items-center my-8">
         <Link
-          className=" font-nunitoSans sm:text-[16px] text-[12px] text-center px-3 py-1 rounded-[30px] bg-gradient text-whiteColor font-semibold cursor-pointer"
+          className=" font-nunitoSans sm:text-[20px] text-[16px] text-center px-4 py-1 rounded-[30px] bg-gradient text-whiteColor font-semibold cursor-pointer"
           to="/"
           onClick={handleBacktoFirstPage}
         >

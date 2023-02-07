@@ -11,6 +11,9 @@ const useApi = (storageName) => {
   const [loading, setLoading] = useState(false);
 
   const fetchMeal = useCallback(async (value) => {
+    // if (meal) {
+    //   return;
+    // }
     setLoading(true);
     try {
       const { data } = await axios.get(
