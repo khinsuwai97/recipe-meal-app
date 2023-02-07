@@ -5,8 +5,8 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
-        dancingScript: ['Dancing Script'],
-        nunitoSans: ['Nunito Sans'],
+        dancingScript: ['Dancing Script', 'sans-serif'],
+        nunitoSans: ['Nunito Sans', 'sans-serif'],
       },
       screens: {
         xs: '480px',
