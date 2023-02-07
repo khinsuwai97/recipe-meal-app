@@ -11,9 +11,9 @@ const Veggie = () => {
     fetchMeal('vegetarian');
   }, []);
 
-  // useEffect(() => {
-  //   localStorage.setItem('veggie', JSON.stringify(veggie));
-  // }, [veggie]);
+  useEffect(() => {
+    localStorage.setItem('veggie', JSON.stringify(veggie));
+  }, [veggie]);
 
   if (error) {
     <Error text={error} />;
