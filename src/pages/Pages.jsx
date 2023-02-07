@@ -19,10 +19,12 @@ const Pages = ({ handleShowPage, handleBacktoFirstPage, showPage }) => {
             element={<FirstPage handleShowPage={handleShowPage} />}
           />
         )}
+
         <Route
           path="/home"
           element={<Home handleBacktoFirstPage={handleBacktoFirstPage} />}
         />
+
         <Route path="/cuisine/:category" element={<Cuisine />} />
         <Route path="/search/:meal" element={<Search />} />
         <Route path="/detail/:id" element={<RecipeDetail />} />
