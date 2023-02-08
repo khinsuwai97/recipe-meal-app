@@ -1,7 +1,7 @@
 ## Recipe Meal App
 
-- search the meal you like and can check hightlighted meal
-- see details of insturctions and ingredients for the meal you like
+- Search the meal you like and can check hightlighted meal
+- See details of insturctions and ingredients for the meal you like
 
 ## Project Specifications
 
@@ -15,7 +15,11 @@
 ## Tech Stacks
 
 - React Hooks,Custom Hooks
-- Swiperjs,framer-motion,react-router-dom,react-icons,typewriter-effect,axios(data fetching)
-- Tailwind CSS
+- Swiperjs,
+- Framer-motion
+- React-router-dom,react-icons,
+- Typewriter-effect
+- Axios(data fetching)
+- Tailwind CSS, CSS
 - spoonacular API (for meal data)
 - Design inspired from developedbyed youtube channel
