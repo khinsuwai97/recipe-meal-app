@@ -13,12 +13,14 @@ const Pages = ({ handleShowPage, handleBacktoFirstPage, showPage }) => {
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>
-        <Route
-          path="/"
-          element={
-            <FirstPage handleShowPage={handleShowPage} showPage={showPage} />
-          }
-        />
+        {showPage && (
+          <Route
+            path="/"
+            element={
+              <FirstPage handleShowPage={handleShowPage} showPage={showPage} />
+            }
+          />
+        )}
 
         <Route
           path="/home"
