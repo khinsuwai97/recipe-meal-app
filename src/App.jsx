@@ -4,7 +4,7 @@ import SearchBar from './components/SearchBar';
 import Pages from './pages/Pages';
 
 const App = () => {
-  const [showPage, setShowPage] = useState(true);
+  const [showPage, setShowPage] = useState(null);
 
   const handleShowPage = () => {
     setShowPage(false);
