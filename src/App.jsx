@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from 'react';
-
 import SearchBar from './components/SearchBar';
 import Pages from './pages/Pages';
 
